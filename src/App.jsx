@@ -1,19 +1,18 @@
-import { ThemeProvider, ThemeToggle } from './components/Theme';
-import UserList from './components/UserList'; 
-
+import { UserProvider } from './components/UserProvider';
+import UserProfile from './components/UserProfile';
+import Notifications from './components/Notifications';
+import NotificationCounter from './components/NotificationCounter';
 
 function App() {
   return (
-    <>
-    <div>
-      <ThemeProvider>
-        <ThemeToggle />
-      </ThemeProvider>
-    </div>
-    <div>
-      <h1>TP - Appel API avec useEffect</h1> <UserList /> 
-    </div>
-    </>
+    <UserProvider>
+      <div style={{ fontFamily: 'Arial', padding: 20 }}>
+        <h1>lil application</h1>
+        <UserProfile />
+        <Notifications />
+        <NotificationCounter />
+      </div>
+    </UserProvider>
   );
 }
 
