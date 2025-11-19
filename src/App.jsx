@@ -1,21 +1,18 @@
-import Bienvenue from "./components/Bienvenue";
-import Compteur from "./components/Compteur";
-import Formulaire from "./components/Formulaire";
-import ListeCourses from "./components/ListeCourses";
-import TodoApp from "./components/TodoApp";
+import { ThemeProvider, ThemeToggle } from './components/Theme';
+import UserList from './components/UserList'; 
+
 
 function App() {
   return (
     <>
-      <div>
-        <Bienvenue nom="Amir" />
-        <Compteur />
-        <Formulaire />
-        <ListeCourses />
-      </div>
-      <div className="App">
-        <TodoApp />
-      </div>
+    <div>
+      <ThemeProvider>
+        <ThemeToggle />
+      </ThemeProvider>
+    </div>
+    <div>
+      <h1>TP - Appel API avec useEffect</h1> <UserList /> 
+    </div>
     </>
   );
 }
