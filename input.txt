@@ -1,0 +1,2 @@
+Voltage=12
+Resistance=4
