@@ -1,0 +1,5 @@
+# add book
+curl -X POST http://localhost:3000/livres -H "Content-Type: application/json" -d '{"titre":"Harry Potter","auteur":"J. K. Rowling","date_publication":"1997-06-26","genre":"Fantasy","disponible":true}'
+
+# get books
+curl http://localhost:3000/livres
